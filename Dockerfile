@@ -10,4 +10,4 @@ WORKDIR /opt/${service_group}/${service_name}
 
 RUN chmod +x ${service_name}
 
-CMD ./${service_name}
+ENTRYPOINT ["sh","-c","./${service_name}"]
